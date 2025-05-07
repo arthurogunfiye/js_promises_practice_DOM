@@ -47,9 +47,9 @@ secondPromise.then((message) => {
   createNotification(message, false);
 });
 
-const clicks = new Set();
-
 const thirdPromise = new Promise((resolve) => {
+  const clicks = new Set();
+
   const counter = (e) => {
     if (e.button === 0 || e.button === 2) {
       clicks.add(e.button);
